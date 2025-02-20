@@ -5,7 +5,7 @@ import { SystemInfoService } from './system-info.service';
 export class SystemInfoController {
   constructor(private readonly systemInfoService: SystemInfoService) { }
 
-  @Get()
+  @Get('test')
   async getSystemInfo(@Headers('user-agent') userAgent: string) {
     return await this.systemInfoService.getSystemInfo(userAgent);
   }
